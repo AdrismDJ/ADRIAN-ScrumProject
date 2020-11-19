@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Scheduler from './components/Scheduler';
 import './App.css';
 
-function App() {
-  return (
-      
-      
-      
-   <div className="container">
-   <h1 className="title">Scrum 1 - Spring 1 <span aria-label="emoji" role="img">🔥</span></h1>
-      
-   <h2 className="sub-title">Spring 1 - Lista de Datos</h2>
+const data = [
+  { start_date: '2020-06-10 6:00', end_date: '2020-06-10 8:00', text: 'Event 1', id: 1 },
+  { start_date: '2020-06-13 10:00', end_date: '2020-06-13 18:00', text: 'Event 2', id: 2 }
+];
 
-      
-      
-      
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <div className='scheduler-container'>
+          <Scheduler events={data} />
+        </div>
       </div>
-  );
+    );
+  }
 }
-
-/*<input type="text" className="new-task"/>*/
-
 export default App;
